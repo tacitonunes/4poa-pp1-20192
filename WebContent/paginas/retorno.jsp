@@ -30,24 +30,22 @@ LinkedList<Carro> listagemRet = (LinkedList<Carro>) session.getAttribute("lista"
 		<th class="ordenado">Montadora</th>
 		<th>Modelo</th>
 		<th>Ano</th>
-		<th colspan="">Opcionais</th>
+		<th>Opcionais</th>
 	</tr>
 <% for(Carro instancia: listagemRet){ %>
+	<%int a = instancia.getOpcionais().length + 1; %>
 	<tr>
-		<td><%=instancia.getPlaca()%></td>
-		<td><%=instancia.getMontadora()%></td>
-		<td><%=instancia.getModelo()%></td>
-		<td><%=instancia.getAno()%></td>
-		<td>
-			<span style="color:red"><%=" || "%></span>
+		<td rowspan="<%=a %>"><%=instancia.getPlaca()%></td>
+		<td rowspan="<%=a %>"><%=instancia.getMontadora()%></td>
+		<td rowspan="<%=a %>"><%=instancia.getModelo()%></td>
+		<td rowspan="<%=a %>"><%=instancia.getAno()%></td>
 			<%for (String opcional : instancia.getOpcionais()) { %>
 				<%if(opcional.equals("null")){%>				
-	        		<%="n/a"%><span style="color:red"><%=" ||"%></span>
+	        		<tr><td><%="n/a"%></td></tr>
 	        	<%} else { %>
-	        		<%=opcional%><span style="color:red"><%=" ||"%></span>
+	        		<tr><td><%=opcional%></td></tr>
 	        	<% } %>
         	<% } %>
-		</td>
 	</tr>
 	
 <%} %>
