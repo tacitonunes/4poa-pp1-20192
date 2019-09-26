@@ -1,0 +1,66 @@
+*{
+	font-family: arial;
+	font-size: 11pt;
+}
+
+input {
+	margin: 3px 10px;
+	border-radius: 15px;
+	padding: 3px;
+	color: #00f;
+}
+
+select {
+	margin-left: 10px;
+	border-radius: 15px;
+	padding: 3px 10px 3px 10px;
+	color: #00f;
+}
+
+input.botao{
+	width: 100px;
+}
+
+table {
+  	border-collapse: collapse;
+  	width: 70%;
+  	margin: 0px auto;
+}
+
+td, th {
+	padding: 2px 20px;
+  	border: 1px solid black;
+  	height: 25px;
+   	text-align: center;
+}
+
+th{
+	background-color: #ddd;
+}
+
+tr:hover{
+	background-color: #eee;
+}
+
+th.ordenado{
+	color: blue;
+}
+
+a.botao{
+	display:block;
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding: 10px 20px;
+	width: 150px;
+	border: solid 1px black;
+	border-radius: 10px;
+	margin: 10px auto;
+	text-decoration:none;
+}
+
+a.botao:hover{
+	background-color: #ddd;
+	color: black;
+	border: solid 1px black;
+}
